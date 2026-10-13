@@ -1,0 +1,7 @@
+{
+  "name": "FluentAI - Next-Gen AI English Tutor",
+  "description": "Speak English with natural confidence in just 15 minutes a day with private real-time AI voice coaching and instant fluency feedback.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
