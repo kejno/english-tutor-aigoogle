@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ThemeMode } from '../types';
+import { BrandIcon } from './BrandIcon';
 import { ShieldCheck, Lock, Check } from 'lucide-react';
 
 interface FooterProps {
@@ -40,10 +41,8 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Col 1: Brand & Compliance (4 cols) */}
           <div className="lg:col-span-4 flex flex-col items-start gap-4">
             <div className="flex items-center gap-2.5">
-              <img
-                alt="FluentAI Brand Logo"
-                className="h-7 w-auto object-contain"
-                src="https://lh3.googleusercontent.com/aida/AEtjO1Wx2NOVwjRzZN8rHLB3rtGncSEUP8qZBGDb9exaMnPex_fx7qkD7jLL0aT7DA9Nn_xMGnkcRYNGor4-OplhNzX3uZTccJJKgnlUUGEMybEOVFGl0V8jXdEhGQFFMX0Ckw2IkFQxDbZad2Qrj5iaMvfsJKNqFb-GhiPt6Z-0j8YdD1ozQUS5kkZa0y4zXPJkzOnFs8omGDjOvgQzIV35WGtBvuaXjm20UcUMhj5l8a4jPYAbMrr2xGvih1uu"
+              <BrandIcon
+                className={`h-7 w-7 shrink-0 ${isLuminous ? 'text-[#4648d4]' : 'text-[#1677ff]'}`}
               />
               <span
                 className={`text-lg font-bold tracking-tight ${

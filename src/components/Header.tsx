@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ThemeMode } from '../types';
+import { BrandIcon } from './BrandIcon';
 import { Sparkles, Layout, Globe, ChevronDown, Menu, X, LogIn } from 'lucide-react';
 
 interface HeaderProps {
@@ -61,10 +62,8 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => handleNavClick('hero')}
             className="flex items-center gap-2.5 text-left group transition-transform focus:outline-none"
           >
-            <img
-              alt="FluentAI Brand Logo"
-              className="h-8 w-auto object-contain"
-              src="https://lh3.googleusercontent.com/aida/AEtjO1Wx2NOVwjRzZN8rHLB3rtGncSEUP8qZBGDb9exaMnPex_fx7qkD7jLL0aT7DA9Nn_xMGnkcRYNGor4-OplhNzX3uZTccJJKgnlUUGEMybEOVFGl0V8jXdEhGQFFMX0Ckw2IkFQxDbZad2Qrj5iaMvfsJKNqFb-GhiPt6Z-0j8YdD1ozQUS5kkZa0y4zXPJkzOnFs8omGDjOvgQzIV35WGtBvuaXjm20UcUMhj5l8a4jPYAbMrr2xGvih1uu"
+            <BrandIcon
+              className={`h-8 w-8 shrink-0 ${isLuminous ? 'text-[#4648d4]' : 'text-[#1677ff]'}`}
             />
             <span
               className={`text-lg sm:text-xl font-bold tracking-tight transition-colors ${

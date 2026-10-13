@@ -107,12 +107,22 @@ npm install
 npm run dev
 ```
 
-Visit `http://localhost:3000` in your browser.
+Visit `http://localhost:3003` in your browser.
 
 ### 4. Build for production
 ```bash
 npm run build
 ```
+
+### 5. Deploy to GitHub Pages
+
+The `.github/workflows/deploy-pages.yml` workflow checks TypeScript, builds the
+site, and deploys it on every push to `main`. In repository **Settings → Pages**,
+select **GitHub Actions** as the deployment source. You can also start the workflow
+manually from the **Actions** tab.
+
+The build uses the Pages base path automatically, so assets load correctly at
+`https://kejno.github.io/english-tutor-aigoogle/` and on a custom domain.
 
 ---
 
