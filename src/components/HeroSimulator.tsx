@@ -3,6 +3,7 @@ import { ThemeMode, PracticeScenario } from '../types';
 import { SCENARIOS } from '../data/mockData';
 import {
   Volume2,
+  ChevronDown,
   Mic,
   MicOff,
   Flame,
@@ -413,7 +414,7 @@ export const HeroSimulator: React.FC<HeroSimulatorProps> = ({
                 <select
                   value={activeScenarioId}
                   onChange={(e) => setActiveScenarioId(e.target.value)}
-                  className={`text-xs font-medium py-1.5 px-3 pr-7 rounded-lg border appearance-none focus:outline-none transition-colors ${
+                  className={`block text-xs font-medium py-1.5 px-3 pr-7 rounded-lg border appearance-none focus:outline-none transition-colors ${
                     isLuminous
                       ? 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
                       : 'bg-white border-[#d9d9d9] text-[#262626] hover:border-[#1677ff] rounded-[4px]'
@@ -425,9 +426,10 @@ export const HeroSimulator: React.FC<HeroSimulatorProps> = ({
                     </option>
                   ))}
                 </select>
-                <span className="material-symbols-outlined text-[14px] absolute right-2 top-2.5 pointer-events-none text-slate-400">
-                  expand_more
-                </span>
+                <ChevronDown
+                  aria-hidden="true"
+                  className="absolute right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 pointer-events-none text-slate-400"
+                />
               </div>
 
               {/* Real-time Decibel / Audio Wave Preview */}
